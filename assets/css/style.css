@@ -24,7 +24,7 @@ body {
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: 50% 115%;
+  background-position: 50% 125%;
   background-attachment: fixed;
 }
 
@@ -123,6 +123,17 @@ span {
   width: 81.5%;
 }
 
+.progressbar::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--white);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 54px;
+  right: 105px;
+}
+
 .progressbar::before {
   content: "";
   width: 0;
@@ -133,17 +144,6 @@ span {
   position: absolute;
   top: 35px;
   right: 25px;
-}
-
-.progressbar::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: var(--white);
-  border-radius: 10px;
-  position: absolute;
-  bottom: 54px;
-  right: 105px;
 }
 
 .block2__capacityleft {
