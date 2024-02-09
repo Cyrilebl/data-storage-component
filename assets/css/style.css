@@ -52,12 +52,12 @@ span {
   border-radius: 8px;
   border-top-right-radius: 80px;
   width: 350px;
-  height: 220px;
+  height: 205px;
 }
 
 .block1__logo img {
   width: 130px;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
 }
 
 .block1__icon {
@@ -92,7 +92,7 @@ span {
   padding: 30px;
   border-radius: 8px;
   width: 500px;
-  height: 175px;
+  height: 160px;
   margin-top: 45px;
 }
 
