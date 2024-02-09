@@ -21,16 +21,19 @@
   <body>
     <!-- Main block -->
     <div class="mainblock">
+      <!-- Left block -->
       <section class="block1">
-        <div class="logo">
+        <div class="block1__logo">
           <img src="assets/images/logo.svg" />
         </div>
-        <div class="blockicon">
+        <div class="block1__icon">
           <img class="icon a" src="assets/images/icon-document.svg" />
           <img class="icon b" src="assets/images/icon-folder.svg" />
           <img class="icon c" src="assets/images/icon-upload.svg" />
         </div>
       </section>
+
+      <!-- Right block -->
       <section class="block2">
         <div class="block2__text">
           <p>You've used <strong>815 GB</strong> of your storage</p>
@@ -39,10 +42,14 @@
           <div class="progressbar"></div>
         </div>
         <div class="block2__capacity">
-          <strong>0 GB</strong>
-          <strong>1000 GB</strong>
+          <span>0 GB</span>
+          <span>1000 GB</span>
         </div>
-        <div class="block2__capacityleft"><strong>185</strong> GB Left</div>
+        <div class="block2__bubble">
+          <h1>185</h1>
+          <h2>GB LEFT</h2>
+        </div>
+        <div class="triangle"></div>
       </section>
     </div>
 

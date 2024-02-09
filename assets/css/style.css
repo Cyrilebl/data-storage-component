@@ -6,25 +6,26 @@
 
   /* color */
   --white: hsl(0, 0%, 100%);
+  --grey: hsl(229, 7%, 55%);
 
   /* gradient */
   --gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
 
 body {
-  color: var(--white);
+  color: var(--grey);
   background-color: var(--background);
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 50% 125%;
+  background-size: 100% 50vh;
+  background-position: bottom;
   background-attachment: fixed;
 }
 
@@ -34,11 +35,10 @@ span {
 }
 
 .mainblock {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
+  min-height: 95vh;
+  align-items: center;
+  justify-content: center;
   gap: 25px;
 }
 
@@ -47,21 +47,20 @@ span {
   display: flex;
   flex-direction: column;
   background-color: var(--blue);
-  padding: 30px;
+  padding: 45px;
   padding-right: 120px;
   border-radius: 8px;
   border-top-right-radius: 80px;
+  width: 350px;
+  height: 220px;
 }
 
-.logo {
-  margin-bottom: 25px;
+.block1__logo img {
+  width: 130px;
+  margin-bottom: 45px;
 }
 
-.logo img {
-  width: 115px;
-}
-
-.blockicon {
+.block1__icon {
   display: flex;
   gap: 13px;
 }
@@ -75,13 +74,13 @@ span {
   border-radius: 8px;
 }
 .a {
-  padding: 11px 12px;
+  padding: 14px 15px;
 }
 .b {
-  padding: 13px 11px;
+  padding: 16px 14px;
 }
 .c {
-  padding: 15px 11px;
+  padding: 18px 14px;
 }
 
 /* Second block */
@@ -92,18 +91,23 @@ span {
   justify-content: center;
   padding: 30px;
   border-radius: 8px;
-  width: 450px;
-  height: 130px;
-  margin-top: 39px;
+  width: 500px;
+  height: 175px;
+  margin-top: 45px;
 }
 
 .block2__text {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  padding-top: 120px;
   margin-bottom: 15px;
 }
 
+.block2__text strong {
+  color: var(--white);
+}
+
 .block2__capacity {
-  font-size: 0.7em;
+  font-size: 0.8em;
   display: flex;
   justify-content: space-between;
 }
@@ -121,65 +125,111 @@ span {
   padding: 6px;
   border-radius: 15px;
   width: 81.5%;
+  position: relative;
 }
 
-.progressbar::after {
+.progressbar::before {
   content: "";
   width: 10px;
   height: 10px;
   background-color: var(--white);
   border-radius: 10px;
   position: absolute;
-  bottom: 54px;
-  right: 105px;
+  bottom: 1px;
+  right: 2px;
 }
 
-.progressbar::before {
+.block2__bubble h1 {
+  color: var(--dark-blue);
+  font-size: 2em;
+}
+
+.block2__bubble h2 {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.block2__bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--white);
+  padding: 20px 30px;
+  border-radius: 10px 10px 0px 10px;
+  width: 170px;
+  height: 70px;
+  position: relative;
+  bottom: 170px;
+  left: 270px;
+}
+
+.triangle {
   content: "";
   width: 0;
   height: 0;
   border-left: 50px solid transparent;
   border-right: 40px solid var(--white);
   border-bottom: 40px solid transparent;
-  position: absolute;
-  top: 35px;
-  right: 25px;
+  position: relative;
+  bottom: 185px;
+  left: 351px;
 }
 
-.block2__capacityleft {
-  color: lightgray;
-  font-size: 0.9em;
-  font-weight: 700;
-  background-color: var(--white);
-  padding: 15px 30px;
-  border-radius: 10px;
-  border-bottom-right-radius: 0px;
-  position: absolute;
-  top: -10px;
-  right: 25px;
-}
-
-.block2__capacityleft strong {
-  color: var(--dark-blue);
-  font-size: 2em;
-}
 /* Footer */
 .attribution {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  color: var(--white);
   text-align: center;
+  font-size: 0.9em;
 }
 .attribution a {
   text-decoration: none;
   color: hsl(6, 100%, 80%);
 }
 
-@media (max-width: 830px) {
+@media (max-width: 950px) {
+  body {
+    background-image: url(../images/bg-mobile.png);
+    background-size: 100% 100vh;
+    background-position: bottom;
+    background-attachment: fixed;
+  }
+
+  .mainblock {
+    flex-direction: column;
+    min-height: 90vh;
+  }
+
+  /* First block */
+  .block1 {
+    width: 320px;
+    height: 200px;
+  }
+
+  /* Second block */
+  .block2 {
+    width: 320px;
+    margin-top: 0px;
+  }
+
+  .block2__text {
+    padding-top: 60px;
+  }
+
+  /* Progress bar */
+  .block2__bubble {
+    border-radius: 10px;
+    position: relative;
+    top: 25px;
+    left: 45px;
+  }
+
+  .triangle {
+    display: none;
+  }
   /* Footer */
   .attribution {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .attribution span {
