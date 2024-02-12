@@ -191,8 +191,6 @@ span {
   body {
     background-image: url(../images/bg-mobile.png);
     background-size: 100% 100vh;
-    background-position: bottom;
-    background-attachment: fixed;
   }
 
   .mainblock {
